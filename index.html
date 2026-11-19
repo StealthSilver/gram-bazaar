@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#176b45">
+<title>Gram Bazaar | आपके गाँव की अपनी दुकान</title>
+<style>
+:root{--green:#176b45;--green2:#218653;--light:#eaf5ed;--ink:#17251d;--muted:#68766d;--cream:#fbfaf5;--orange:#f2a93b;--line:#e5ebe5;--shadow:0 12px 35px #173b2412}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:#fff}button,input,select,textarea{font:inherit}button{cursor:pointer}.topbar{background:#104d32;color:#fff;text-align:center;padding:9px 14px;font-size:13px}.topbar b{color:#ffe09a}.container{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:#ffffffed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav{height:76px;display:flex;align-items:center;gap:25px}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--green);font-size:23px;font-weight:850;white-space:nowrap}.brand-mark{width:42px;height:42px;border-radius:14px;background:var(--green);color:white;display:grid;place-items:center;font-size:23px}.search{flex:1;position:relative}.search input{width:100%;border:1px solid var(--line);border-radius:13px;background:#f7f9f6;padding:13px 16px 13px 43px;outline:none}.search input:focus{border-color:var(--green)}.search span{position:absolute;left:15px;top:11px;font-size:18px;color:var(--muted)}.nav-actions{display:flex;gap:10px;align-items:center}.btn{border:0;border-radius:12px;padding:12px 17px;font-weight:750;transition:.2s}.btn-primary{background:var(--green);color:white}.btn-primary:hover{background:#105537;transform:translateY(-1px)}.btn-light{background:var(--light);color:var(--green)}.cart-btn{position:relative}.count{position:absolute;right:-6px;top:-7px;background:var(--orange);color:#382408;border-radius:50%;min-width:21px;height:21px;font-size:12px;display:grid;place-items:center;padding:0 5px}
+.hero{padding:48px 0 38px;background:linear-gradient(115deg,#f0f7ed 0%,#fff9e9 100%);overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:35px}.eyebrow{display:inline-flex;gap:7px;align-items:center;color:var(--green);background:#dcefe0;border-radius:30px;padding:8px 13px;font-size:13px;font-weight:750}.hero h1{font-size:clamp(38px,5vw,61px);line-height:1.08;letter-spacing:-2px;margin:18px 0 15px}.hero h1 em{font-style:normal;color:var(--green)}.hero p{font-size:17px;color:var(--muted);line-height:1.7;max-width:520px}.hero-buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.hero-art{min-height:310px;border-radius:30px;background:linear-gradient(145deg,#d7ebd6,#f6e8c6);display:grid;place-items:center;position:relative;overflow:hidden}.produce{font-size:clamp(100px,15vw,180px);filter:drop-shadow(0 16px 12px #284b2430);transform:rotate(-8deg)}.float-tag{position:absolute;background:#fff;border-radius:14px;padding:12px 15px;box-shadow:var(--shadow);font-weight:750}.tag-one{top:25px;left:22px}.tag-two{right:20px;bottom:25px}
+.perks{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:23px 0}.perk{display:flex;align-items:center;gap:12px;padding:14px;border:1px solid var(--line);border-radius:15px}.perk-icon{width:42px;height:42px;border-radius:12px;background:var(--light);display:grid;place-items:center;font-size:21px}.perk strong{display:block;font-size:14px}.perk small{color:var(--muted)}
+section.products{padding:43px 0 65px;background:var(--cream)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin-bottom:23px}.section-head h2{font-size:30px;margin:0 0 7px;letter-spacing:-.7px}.section-head p{margin:0;color:var(--muted)}.chips{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:25px}.chip{border:1px solid var(--line);background:white;color:#536158;border-radius:30px;padding:9px 15px;font-size:13px;font-weight:700}.chip.active,.chip:hover{background:var(--green);border-color:var(--green);color:#fff}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.product{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.2s;position:relative}.product:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.product-pic{height:174px;background:#f1f5ed;display:grid;place-items:center;font-size:78px;position:relative}.product-pic .label{position:absolute;left:12px;top:12px;background:#fff;border-radius:20px;padding:5px 9px;font-size:11px;font-weight:800;color:var(--green)}.product-info{padding:15px}.product-info h3{margin:0 0 5px;font-size:16px}.product-info p{margin:0;color:var(--muted);font-size:12px}.price-row{display:flex;align-items:center;justify-content:space-between;margin-top:15px}.price{font-size:18px;font-weight:850}.price small{font-size:12px;color:var(--muted);font-weight:500}.add{width:37px;height:37px;border:1px solid #cfe2d2;background:#eff8ef;color:var(--green);border-radius:11px;font-size:22px;font-weight:700}.add:hover{background:var(--green);color:#fff}.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:40px}
+footer{background:#123e2b;color:#e7f2e9;padding:38px 0}.footer-row{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}.footer-row p{color:#b9d0bf;max-width:440px;line-height:1.7}.footer-bottom{border-top:1px solid #ffffff25;margin-top:25px;padding-top:18px;color:#b9d0bf;font-size:13px}
+.overlay{position:fixed;inset:0;background:#0d1c13a8;z-index:50;display:none;justify-content:flex-end}.overlay.show{display:flex}.drawer{background:white;width:min(470px,100%);height:100%;overflow:auto;padding:24px;box-shadow:-15px 0 40px #0002;animation:slide .2s ease}@keyframes slide{from{transform:translateX(30px);opacity:.7}to{transform:none;opacity:1}}.drawer-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:17px}.drawer-head h2{margin:0}.close{border:0;background:#f0f3ef;border-radius:10px;width:38px;height:38px;font-size:22px}.cart-items{padding:12px 0}.cart-item{display:grid;grid-template-columns:58px 1fr auto;gap:12px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}.cart-emoji{height:55px;width:55px;background:#f1f5ed;border-radius:12px;display:grid;place-items:center;font-size:30px}.cart-item h4{margin:0 0 5px}.cart-item small{color:var(--muted)}.qty{display:flex;align-items:center;gap:9px;margin-top:8px}.qty button{border:1px solid var(--line);background:#fff;border-radius:7px;width:27px;height:27px}.remove{border:0;background:none;color:#bd5145;font-size:12px;padding:5px 0}.cart-total{border-top:1px solid var(--line);padding-top:17px;display:flex;justify-content:space-between;font-size:19px;font-weight:850}.hint{font-size:12px;color:var(--muted);line-height:1.5}.checkout{margin-top:20px}.checkout h3{margin:0 0 13px}.field{margin:12px 0}.field label{display:block;font-size:13px;font-weight:750;margin-bottom:6px}.field input,.field textarea{width:100%;border:1px solid #dce4dc;border-radius:10px;padding:12px;outline:none}.field input:focus,.field textarea:focus{border-color:var(--green)}.field textarea{min-height:75px;resize:vertical}.full{width:100%;margin-top:10px}.wa{background:#168b50;color:white}.wa:hover{background:#0d7540}.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);background:#17251d;color:white;padding:12px 18px;border-radius:12px;opacity:0;pointer-events:none;transition:.25s;z-index:80;font-size:14px}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:850px){.grid{grid-template-columns:repeat(3,1fr)}.hero-grid{grid-template-columns:1fr .8fr}.nav{gap:13px}.brand{font-size:20px}}
+@media(max-width:650px){.nav{height:auto;min-height:68px;flex-wrap:wrap;padding:10px 0;gap:10px}.brand{flex:1}.nav-actions .btn{padding:10px 12px}.search{order:3;flex-basis:100%}.hero{padding:34px 0}.hero-grid{grid-template-columns:1fr}.hero-art{min-height:205px}.produce{font-size:115px}.hero h1{font-size:42px}.perks{grid-template-columns:1fr;gap:9px}.perk{padding:10px}.grid{grid-template-columns:repeat(2,1fr);gap:11px}.product-pic{height:135px;font-size:61px}.product-info{padding:12px}.section-head h2{font-size:25px}.section-head{align-items:start;flex-direction:column}.section-head p{font-size:13px}.price{font-size:16px}}
+@media(max-width:370px){.grid{grid-template-columns:1fr}.product-pic{height:170px}}
+</style>
+</head>
+<body>
+<div class="topbar">🌾 <b>Gram Bazaar</b> — आपके गाँव की अपनी ऑनलाइन दुकान | ताज़ा सामान, आसान ऑर्डर</div>
+<header><div class="container nav">
+<a class="brand" href="#"><span class="brand-mark">🌿</span> Gram Bazaar</a>
+<div class="search"><span>⌕</span><input id="search" type="search" placeholder="आटा, चावल, सब्ज़ियाँ खोजें..." aria-label="प्रोडक्ट खोजें"></div>
+<div class="nav-actions"><button class="btn btn-light cart-btn" id="openCart">🛒 Cart <span class="count" id="cartCount">0</span></button></div>
+</div></header>
+<main>
+<section class="hero"><div class="container hero-grid">
+<div><span class="eyebrow">🌱 स्थानीय दुकानदारों का साथ</span><h1>गाँव की खरीदारी,<br><em>अब ऑनलाइन!</em></h1><p>रोज़मर्रा का सामान अब घर बैठे चुनें। अपना कार्ट बनाएं और WhatsApp पर ऑर्डर भेजकर आसानी से डिलीवरी पाएं।</p><div class="hero-buttons"><button class="btn btn-primary" onclick="document.getElementById('products').scrollIntoView()">खरीदारी शुरू करें →</button><button class="btn btn-light" onclick="openCart()">🛒 मेरा कार्ट</button></div></div>
+<div class="hero-art"><div class="float-tag tag-one">🥬 ताज़ा सामान</div><div class="produce">🧺</div><div class="float-tag tag-two">💚 लोकल खरीदें</div></div>
+</div></section>
+<div class="container perks"><div class="perk"><div class="perk-icon">🚚</div><div><strong>घर तक डिलीवरी</strong><small>आपके पते पर सामान</small></div></div><div class="perk"><div class="perk-icon">📱</div><div><strong>WhatsApp से ऑर्डर</strong><small>सीधा दुकानदार से संपर्क</small></div></div><div class="perk"><div class="perk-icon">🌾</div><div><strong>लोकल बाज़ार</strong><small>अपने क्षेत्र की खरीदारी</small></div></div></div>
+<section class="products" id="products"><div class="container">
+<div class="section-head"><div><h2>आज क्या खरीदना है?</h2><p>अपनी पसंद के प्रोडक्ट चुनें और कार्ट में जोड़ें।</p></div><span id="resultCount" class="hint"></span></div>
+<div class="chips" id="categories"></div><div class="grid" id="productGrid"></div>
+</div></section>
+</main>
+<footer><div class="container"><div class="footer-row"><div><a class="brand" href="#" style="color:white"><span class="brand-mark" style="background:#fff;color:#176b45">🌿</span> Gram Bazaar</a><p>आपके गाँव और आसपास के लोगों के लिए आसान ऑनलाइन खरीदारी। लोकल दुकानदारों को डिजिटल बाज़ार से जोड़ने की एक छोटी-सी पहल।</p></div><div><strong>सहायता</strong><p>ऑर्डर या डिलीवरी से जुड़ी जानकारी के लिए WhatsApp पर संपर्क करें।</p></div></div><div class="footer-bottom">© <span id="year"></span> Gram Bazaar. Made with 💚 for local communities.</div></div></footer>
+<div class="overlay" id="overlay" onclick="if(event.target===this)closeCart()"><aside class="drawer">
+<div class="drawer-head"><h2>🛒 आपका कार्ट</h2><button class="close" onclick="closeCart()" aria-label="बंद करें">×</button></div>
+<div class="cart-items" id="cartItems"></div><div class="cart-total"><span>कुल राशि</span><span id="total">₹0</span></div><p class="hint">डिलीवरी चार्ज और अंतिम उपलब्धता दुकानदार WhatsApp पर कन्फर्म करेंगे।</p>
+<div class="checkout"><h3>डिलीवरी की जानकारी</h3>
+<div class="field"><label for="customerName">आपका नाम *</label><input id="customerName" placeholder="अपना नाम लिखें"></div>
+<div class="field"><label for="customerPhone">मोबाइल नंबर *</label><input id="customerPhone" type="tel" inputmode="numeric" placeholder="10 अंकों का मोबाइल नंबर" maxlength="10"></div>
+<div class="field"><label for="customerAddress">पूरा डिलीवरी पता *</label><textarea id="customerAddress" placeholder="मकान नंबर, गाँव, वार्ड, नज़दीकी जगह..."></textarea></div>
+<div class="field"><label for="customerNote">ऑर्डर नोट (वैकल्पिक)</label><input id="customerNote" placeholder="कोई खास निर्देश?"></div>
+<button class="btn wa full" onclick="sendWhatsApp()">WhatsApp पर ऑर्डर भेजें ↗</button><p class="hint">बटन दबाने पर WhatsApp खुलेगा। ऑर्डर भेजने से पहले आप मैसेज देख सकते हैं।</p>
+</div></aside></div><div class="toast" id="toast"></div>
+<script>
+// ===================== दुकान की सेटिंग =====================
+// नीचे अपना WhatsApp नंबर country code सहित डालें। उदाहरण: 919876543210
+const WHATSAPP_NUMBER = "91XXXXXXXXXX";
+// ===========================================================
+
+const products = [
+{id:1,name:"ताज़ा टमाटर",category:"सब्ज़ियाँ",price:30,unit:"kg",emoji:"🍅",desc:"ताज़े और लाल टमाटर",tag:"लोकप्रिय"},
+{id:2,name:"आलू",category:"सब्ज़ियाँ",price:25,unit:"kg",emoji:"🥔",desc:"रोज़मर्रा के इस्तेमाल के लिए",tag:""},
+{id:3,name:"प्याज़",category:"सब्ज़ियाँ",price:35,unit:"kg",emoji:"🧅",desc:"अच्छी क्वालिटी के प्याज़",tag:""},
+{id:4,name:"हरी मिर्च",category:"सब्ज़ियाँ",price:50,unit:"kg",emoji:"🌶️",desc:"ताज़ी हरी मिर्च",tag:""},
+{id:5,name:"सेब",category:"फल",price:140,unit:"kg",emoji:"🍎",desc:"मीठे और कुरकुरे सेब",tag:""},
+{id:6,name:"केला",category:"फल",price:50,unit:"dozen",emoji:"🍌",desc:"ताज़े केले",tag:""},
+{id:7,name:"दूध",category:"डेयरी",price:60,unit:"litre",emoji:"🥛",desc:"ताज़ा पैक्ड दूध",tag:""},
+{id:8,name:"दही",category:"डेयरी",price:45,unit:"500 g",emoji:"🥣",desc:"ताज़ा दही",tag:""},
+{id:9,name:"बासमती चावल",category:"अनाज",price:85,unit:"kg",emoji:"🍚",desc:"खुशबूदार चावल",tag:""},
+{id:10,name:"गेहूँ का आटा",category:"अनाज",price:38,unit:"kg",emoji:"🌾",desc:"ताज़ा पिसा आटा",tag:""},
+{id:11,name:"चना दाल",category:"दालें",price:95,unit:"kg",emoji:"🫘",desc:"साफ़ और अच्छी दाल",tag:""},
+{id:12,name:"अरहर दाल",category:"दालें",price:125,unit:"kg",emoji:"🟡",desc:"घर के खाने के लिए",tag:""}
+];
+const categories=["सभी",...new Set(products.map(p=>p.category))];
+let activeCategory="सभी", cart=JSON.parse(localStorage.getItem("gramBazaarCart")||"{}");
+const money=n=>"₹"+Number(n).toLocaleString("en-IN");
+function saveCart(){localStorage.setItem("gramBazaarCart",JSON.stringify(cart));updateCartCount()}
+function updateCartCount(){document.getElementById("cartCount").textContent=Object.values(cart).reduce((a,b)=>a+b,0)}
+function renderCategories(){document.getElementById("categories").innerHTML=categories.map(c=>`<button class="chip ${c===activeCategory?"active":""}" onclick="setCategory('${c}')">${c}</button>`).join("")}
+function setCategory(c){activeCategory=c;renderCategories();renderProducts()}
+function renderProducts(){
+ const q=document.getElementById("search").value.trim().toLowerCase();
+ const list=products.filter(p=>(activeCategory==="सभी"||p.category===activeCategory)&&(p.name.toLowerCase().includes(q)||p.category.toLowerCase().includes(q)||p.desc.toLowerCase().includes(q)));
+ document.getElementById("resultCount").textContent=`${list.length} प्रोडक्ट`;
+ document.getElementById("productGrid").innerHTML=list.length?list.map(p=>`<article class="product"><div class="product-pic"><span>${p.emoji}</span>${p.tag?`<span class="label">${p.tag}</span>`:""}</div><div class="product-info"><h3>${p.name}</h3><p>${p.desc}</p><div class="price-row"><div class="price">${money(p.price)} <small>/ ${p.unit}</small></div><button class="add" onclick="addToCart(${p.id})" aria-label="${p.name} कार्ट में जोड़ें">+</button></div></div></article>`).join(""):'<div class="empty">इस खोज से कोई प्रोडक्ट नहीं मिला। दूसरे नाम से खोजें।</div>';
+}
+function addToCart(id){cart[id]=(cart[id]||0)+1;saveCart();toast("प्रोडक्ट कार्ट में जोड़ दिया गया!");}
+function cartDetails(){return Object.entries(cart).map(([id,qty])=>({product:products.find(p=>p.id===Number(id)),qty})).filter(x=>x.product)}
+function cartTotal(){return cartDetails().reduce((s,x)=>s+x.product.price*x.qty,0)}
+function renderCart(){
+ const items=cartDetails();document.getElementById("cartItems").innerHTML=items.length?items.map(({product:p,qty})=>`<div class="cart-item"><div class="cart-emoji">${p.emoji}</div><div><h4>${p.name}</h4><small>${money(p.price)} / ${p.unit}</small><div class="qty"><button onclick="changeQty(${p.id},-1)">−</button><b>${qty}</b><button onclick="changeQty(${p.id},1)">+</button></div></div><div style="text-align:right"><b>${money(p.price*qty)}</b><br><button class="remove" onclick="removeItem(${p.id})">हटाएँ</button></div></div>`).join(""):'<div class="empty">आपका कार्ट अभी खाली है।<br>कुछ प्रोडक्ट जोड़कर शुरुआत करें! 🛍️</div>';
+ document.getElementById("total").textContent=money(cartTotal());
+}
+function changeQty(id,d){cart[id]=(cart[id]||0)+d;if(cart[id]<=0)delete cart[id];saveCart();renderCart()}
+function removeItem(id){delete cart[id];saveCart();renderCart()}
+function openCart(){renderCart();document.getElementById("overlay").classList.add("show");document.body.style.overflow="hidden"}
+function closeCart(){document.getElementById("overlay").classList.remove("show");document.body.style.overflow=""}
+function sendWhatsApp(){
+ const items=cartDetails();if(!items.length){toast("पहले कार्ट में प्रोडक्ट जोड़ें।");return}
+ const name=document.getElementById("customerName").value.trim(),phone=document.getElementById("customerPhone").value.trim(),address=document.getElementById("customerAddress").value.trim(),note=document.getElementById("customerNote").value.trim();
+ if(!name||!phone||!address){toast("कृपया नाम, मोबाइल और पता भरें।");return}
+ if(!/^[6-9]\d{9}$/.test(phone)){toast("कृपया सही 10 अंकों का मोबाइल नंबर डालें।");return}
+ if(!/^91\d{10}$/.test(WHATSAPP_NUMBER)){toast("दुकान का WhatsApp नंबर index.html में सेट करें।");return}
+ const lines=items.map(({product:p,qty})=>`• ${p.name} (${qty} × ${p.unit}) = ${money(p.price*qty)}`);
+ const message=`नमस्ते Gram Bazaar! मुझे यह ऑर्डर करना है:\n\n${lines.join("\n")}\n\n*कुल राशि: ${money(cartTotal())}*\n\n*ग्राहक का नाम:* ${name}\n*मोबाइल:* ${phone}\n*डिलीवरी पता:* ${address}${note?`\n*नोट:* ${note}`:""}\n\nकृपया ऑर्डर और डिलीवरी की पुष्टि करें।`;
+ window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,"_blank");
+}
+let toastTimer;function toast(msg){const el=document.getElementById("toast");el.textContent=msg;el.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove("show"),2500)}
+document.getElementById("search").addEventListener("input",renderProducts);
+document.getElementById("openCart").addEventListener("click",openCart);
+document.getElementById("year").textContent=new Date().getFullYear();
+renderCategories();renderProducts();updateCartCount();
+</script>
+</body>
+</html>
